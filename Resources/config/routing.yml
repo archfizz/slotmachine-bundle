@@ -1,0 +1,3 @@
+SlotMachine:
+    pattern:  /
+    defaults: { _controller: SlotMachineSlotBundle:Default:index }

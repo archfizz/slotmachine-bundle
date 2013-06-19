@@ -1,0 +1,27 @@
+{
+    "name": "slotmachine/slot-bundle",
+    "type": "symfony-bundle",
+    "description": "Bundle for use with Symfony2 and Doctrine",
+    "keywords": ["slotmachine", "campaigns", "bundle"],
+    "homepage": "http://github.com/archfizz/SlotBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adam Elsodaney",
+            "email": "aelso1@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "slotmachine/slotmachine": "1.0.*"
+    },
+    "require-dev": {
+        "symfony/framework-bundle": ">=2.1"
+    },
+    "autoload": {
+        "psr-0": { "SlotMachine\\SlotBundle": "" }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "target-dir": "SlotMachine/SlotBundle"
+}
