@@ -1,6 +1,6 @@
 <?php
 
-namespace Soapbox\CampaignBundle\Entity;
+namespace SlotMachine\SlotBundle\Entity;
 
 use Doctrine\ORM\EntityRepository;
 
