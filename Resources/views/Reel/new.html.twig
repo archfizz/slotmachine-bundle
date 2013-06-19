@@ -1,16 +1,16 @@
-{% extends '::base.html.twig' %}
+{% extends 'SlotMachineSlotBundle::layout.html.twig' %}
 
-{% block body -%}
-    <h1>Reel creation</h1>
+{% block body %}
+<h1>Reel creation</h1>
 
-    <form action="{{ path('reel_create') }}" method="post" {{ form_enctype(form) }}>
-        {{ form_widget(form) }}
-        <p>
-            <button type="submit">Create</button>
-        </p>
-    </form>
+<form action="{{ path('reel_create') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <p>
+        <button type="submit">Create</button>
+    </p>
+</form>
 
-        <ul class="record_actions">
+<ul class="record_actions">
     <li>
         <a href="{{ path('reel') }}">
             Back to the list
