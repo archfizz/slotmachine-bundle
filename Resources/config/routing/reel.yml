@@ -1,0 +1,30 @@
+reel:
+    pattern:  /
+    defaults: { _controller: "SlotMachineSlotBundle:Reel:index" }
+
+reel_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "SlotMachineSlotBundle:Reel:show" }
+
+reel_new:
+    pattern:  /new
+    defaults: { _controller: "SlotMachineSlotBundle:Reel:new" }
+
+reel_create:
+    pattern:  /create
+    defaults: { _controller: "SlotMachineSlotBundle:Reel:create" }
+    requirements: { _method: post }
+
+reel_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "SlotMachineSlotBundle:Reel:edit" }
+
+reel_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "SlotMachineSlotBundle:Reel:update" }
+    requirements: { _method: post|put }
+
+reel_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "SlotMachineSlotBundle:Reel:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,30 @@
+slotcontainer:
+    pattern:  /
+    defaults: { _controller: "SlotMachineSlotBundle:SlotContainer:index" }
+
+slotcontainer_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "SlotMachineSlotBundle:SlotContainer:show" }
+
+slotcontainer_new:
+    pattern:  /new
+    defaults: { _controller: "SlotMachineSlotBundle:SlotContainer:new" }
+
+slotcontainer_create:
+    pattern:  /create
+    defaults: { _controller: "SlotMachineSlotBundle:SlotContainer:create" }
+    requirements: { _method: post }
+
+slotcontainer_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "SlotMachineSlotBundle:SlotContainer:edit" }
+
+slotcontainer_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "SlotMachineSlotBundle:SlotContainer:update" }
+    requirements: { _method: post|put }
+
+slotcontainer_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "SlotMachineSlotBundle:SlotContainer:delete" }
+    requirements: { _method: post|delete }

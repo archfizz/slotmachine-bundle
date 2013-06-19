@@ -1,3 +1,19 @@
-SlotMachine:
-    pattern:  /
-    defaults: { _controller: SlotMachineSlotBundle:Default:index }
+SlotMachineSlotBundle_slotcontainer:
+        resource: "@SlotMachineSlotBundle/Resources/config/routing/slotcontainer.yml"
+        prefix:   /slotcontainer
+
+SlotMachineSlotBundle_slot:
+        resource: "@SlotMachineSlotBundle/Resources/config/routing/slot.yml"
+        prefix:   /slot
+
+SlotMachineSlotBundle_querykey:
+        resource: "@SlotMachineSlotBundle/Resources/config/routing/querykey.yml"
+        prefix:   /querykey
+
+SlotMachineSlotBundle_reel:
+        resource: "@SlotMachineSlotBundle/Resources/config/routing/reel.yml"
+        prefix:   /reel
+
+SlotMachineSlotBundle_card:
+        resource: "@SlotMachineSlotBundle/Resources/config/routing/card.yml"
+        prefix:   /card

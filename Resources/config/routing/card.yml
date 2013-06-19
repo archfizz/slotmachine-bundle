@@ -1,0 +1,30 @@
+card:
+    pattern:  /
+    defaults: { _controller: "SlotMachineSlotBundle:Card:index" }
+
+card_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "SlotMachineSlotBundle:Card:show" }
+
+card_new:
+    pattern:  /new
+    defaults: { _controller: "SlotMachineSlotBundle:Card:new" }
+
+card_create:
+    pattern:  /create
+    defaults: { _controller: "SlotMachineSlotBundle:Card:create" }
+    requirements: { _method: post }
+
+card_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "SlotMachineSlotBundle:Card:edit" }
+
+card_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "SlotMachineSlotBundle:Card:update" }
+    requirements: { _method: post|put }
+
+card_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "SlotMachineSlotBundle:Card:delete" }
+    requirements: { _method: post|delete }

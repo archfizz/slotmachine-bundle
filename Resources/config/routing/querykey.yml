@@ -1,0 +1,30 @@
+querykey:
+    pattern:  /
+    defaults: { _controller: "SlotMachineSlotBundle:QueryKey:index" }
+
+querykey_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "SlotMachineSlotBundle:QueryKey:show" }
+
+querykey_new:
+    pattern:  /new
+    defaults: { _controller: "SlotMachineSlotBundle:QueryKey:new" }
+
+querykey_create:
+    pattern:  /create
+    defaults: { _controller: "SlotMachineSlotBundle:QueryKey:create" }
+    requirements: { _method: post }
+
+querykey_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "SlotMachineSlotBundle:QueryKey:edit" }
+
+querykey_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "SlotMachineSlotBundle:QueryKey:update" }
+    requirements: { _method: post|put }
+
+querykey_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "SlotMachineSlotBundle:QueryKey:delete" }
+    requirements: { _method: post|delete }
