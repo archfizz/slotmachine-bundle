@@ -1,0 +1,44 @@
+SlotMachine\SlotBundle\Entity\QueryKey:
+    type: entity
+    table: querykey
+    repositoryClass: SlotMachine\SlotBundle\Entity\QueryKeyRepository
+    fields:
+        id:
+            type: integer
+            scale: 0
+            length: null
+            unique: false
+            nullable: false
+            precision: 0
+            id: true
+            generator:
+                strategy: IDENTITY
+        name:
+            type: string
+            scale: 0
+            length: 255
+            unique: false
+            nullable: false
+            precision: 0
+    manyToMany:
+        slots:
+            targetEntity: SlotMachine\SlotBundle\Entity\Slot
+            cascade:
+                - persist
+            mappedBy: null
+            inversedBy: queryKeys
+            joinTable:
+                name: querykey_slot
+                schema: null
+                joinColumns:
+                    -
+                        name: querykey_id
+                        referencedColumnName: id
+                        onDelete: CASCADE
+                inverseJoinColumns:
+                    -
+                        name: slot_id
+                        referencedColumnName: id
+                        onDelete: CASCADE
+            orderBy: null
+    lifecycleCallbacks: {  }

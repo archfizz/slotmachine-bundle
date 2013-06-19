@@ -1,0 +1,58 @@
+SlotMachine\SlotBundle\Entity\Slot:
+    type: entity
+    table: slot
+    repositoryClass: SlotMachine\SlotBundle\Entity\SlotRepository
+    fields:
+        id:
+            type: integer
+            scale: 0
+            length: null
+            unique: false
+            nullable: false
+            precision: 0
+            id: true
+            generator:
+                strategy: IDENTITY
+        name:
+            type: string
+            scale: 0
+            length: 255
+            unique: false
+            nullable: false
+            precision: 0
+        undefinedCardResolution:
+            type: integer
+            scale: 0
+            length: null
+            unique: false
+            nullable: false
+            precision: 0
+            column: undefined_card_resolution
+    manyToMany:
+        reels:
+            targetEntity: SlotMachine\SlotBundle\Entity\Reel
+            cascade:
+                - persist
+            mappedBy: slots
+            inversedBy: null
+            joinTable: {  }
+            orderBy: null
+        queryKeys:
+            targetEntity: SlotMachine\SlotBundle\Entity\QueryKey
+            cascade:
+                - persist
+            mappedBy: slots
+            inversedBy: null
+            joinTable: {  }
+            orderBy: null
+    manyToOne:
+        container:
+            targetEntity: SlotMachine\SlotBundle\Entity\SlotContainer
+            cascade: {  }
+            mappedBy: null
+            inversedBy: slots
+            joinColumns:
+                container:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

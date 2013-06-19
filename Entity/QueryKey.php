@@ -2,38 +2,25 @@
 
 namespace SlotMachine\SlotBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * QueryKey
- *
- * @ORM\Table("querykey")
- * @ORM\Entity(repositoryClass="SlotMachine\SlotBundle\Entity\QueryKeyRepository")
  */
 class QueryKey
 {
     /**
      * @var integer
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
     /**
      * @var string
-     *
-     * @ORM\Column(name="name", type="string", length=255)
      */
     private $name;
 
     /**
      * @var ArrayCollection
-     *
-     * @ORM\ManyToMany(targetEntity="Slot", inversedBy="queryKeys", cascade={ "persist" })
-     * @ORM\JoinTable(name="querykey_slot")
      */
     private $slots;
 

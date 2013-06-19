@@ -2,59 +2,40 @@
 
 namespace SlotMachine\SlotBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Slot
- *
- * @ORM\Table("slot")
- * @ORM\Entity(repositoryClass="SlotMachine\SlotBundle\Entity\SlotRepository")
  */
 class Slot
 {
     /**
      * @var integer
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
     /**
      * @var string
-     *
-     * @ORM\Column(name="name", type="string", length=255)
      */
     private $name;
 
     /**
      * @var string
-     *
-     * @ORM\Column(name="undefined_card_resolution", type="integer")
      */
     private $undefinedCardResolution;
 
     /**
      * @var ArrayCollection
-     *
-     * @ORM\ManyToMany(targetEntity="Reel", mappedBy="slots", cascade={ "persist" })
      */
     private $reels;
 
     /**
      * @var ArrayCollection
-     *
-     * @ORM\ManyToMany(targetEntity="QueryKey", mappedBy="slots", cascade={ "persist" })
      */
     private $queryKeys;
 
     /**
      * @var SlotContainer
-     *
-     * @ORM\ManyToOne(targetEntity="SlotContainer", inversedBy="slots")
-     * @ORM\JoinColumn(name="container", referencedColumnName="id")
      */
     private $container;
 
