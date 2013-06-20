@@ -1,7 +1,7 @@
 SlotMachine\SlotBundle\Entity\Reel:
     type: entity
     table: reel
-    repositoryClass: SlotMachine\SlotBundle\Entity\ReelRepository
+    repositoryClass: SlotMachine\SlotBundle\Entity\Repository\ReelRepository
     fields:
         id:
             type: integer

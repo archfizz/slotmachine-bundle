@@ -1,6 +1,6 @@
 <?php
 
-namespace SlotMachine\SlotBundle\Entity;
+namespace SlotMachine\SlotBundle\Entity\Repository;
 
 use Doctrine\ORM\EntityRepository;
 

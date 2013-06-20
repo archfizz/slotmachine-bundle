@@ -1,7 +1,7 @@
 SlotMachine\SlotBundle\Entity\SlotContainer:
     type: entity
     table: slotcontainer
-    repositoryClass: SlotMachine\SlotBundle\Entity\SlotContainerRepository
+    repositoryClass: SlotMachine\SlotBundle\Entity\Repository\SlotContainerRepository
     fields:
         id:
             type: integer

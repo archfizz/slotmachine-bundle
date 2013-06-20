@@ -1,7 +1,7 @@
 SlotMachine\SlotBundle\Entity\QueryKey:
     type: entity
     table: querykey
-    repositoryClass: SlotMachine\SlotBundle\Entity\QueryKeyRepository
+    repositoryClass: SlotMachine\SlotBundle\Entity\Repository\QueryKeyRepository
     fields:
         id:
             type: integer
